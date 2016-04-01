@@ -1,18 +1,46 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>React Starterify</title>
 
     <!-- build:css -->
     <link rel="stylesheet" href="dist/styles/main.css">
     <!-- endbuild -->
-  </head>
-  <body>
-    <div id="content"></div>
+</head>
+<style>
+    #main {
+        display: flex
+    }
+    #vue,
+    #react {
+        flex: 1
+    }
+</style>
+
+<body>
+    <div id="main">
+        <div id="vue">
+            <h1>Vue</h1>
+            <ul v-if="enps.length">
+                <input type="checkbox" name="all" @click.stop="clickAll">Select all</input>
+                <li v-for="enp in enps" track-by="$index">
+                    <input type="checkbox" name={{enp.name}} v-model="enp.checked" value={{enp.name}}
+                    checked={{enp.checked}}>{{enp.name}}</input>
+                    <br>
+                </li>
+            </ul>
+        </div>
+        <div id="react">
+            <div id="content"></div>
+        </div>
+    </div>
+
 
     <!-- build:js -->
     <script src="dist/js/app.js"></script>
     <!-- endbuild -->
-  </body>
+</body>
+
 </html>

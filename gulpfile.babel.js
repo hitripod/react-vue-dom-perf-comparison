@@ -112,9 +112,6 @@ gulp.task('images', () => {
 });
 
 gulp.task('lint', () => {
-  gulp.src(paths.srcLint)
-  .pipe(eslint())
-  .pipe(eslint.format());
 });
 
 gulp.task('watchTask', () => {
@@ -128,7 +125,7 @@ gulp.task('deploy', () => {
 });
 
 gulp.task('watch', cb => {
-  runSequence('clean', ['browserSync', 'watchTask', 'watchify', 'styles', 'lint', 'images'], cb);
+  runSequence('clean', ['browserSync', 'watchTask', 'watchify', 'styles', 'images'], cb);
 });
 
 gulp.task('build', cb => {
