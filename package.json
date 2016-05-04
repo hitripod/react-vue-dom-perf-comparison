@@ -41,7 +41,8 @@
     "history": "^2.0.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
-    "react-router": "^2.0.0"
+    "react-router": "^2.0.0",
+    "vue": "^1.0.21"
   },
   "devDependencies": {
     "autoprefixer": "^6.0.0",
